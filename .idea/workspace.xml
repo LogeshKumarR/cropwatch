@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93df4ee0-16d5-4e51-87bb-8d19fe902d26" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/cropwatch/dao/FarmerCropDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/cropwatch/view/RegisterResponseView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/cropwatch/service/RegisterationService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/cropwatch_dev.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/cropwatch_production.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/org/cropwatch/view/register_response.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/cropwatch/CropWatchResource.java" afterPath="$PROJECT_DIR$/src/main/java/org/cropwatch/CropWatchResource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/migrations.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchService.java" afterPath="$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cropwatch.iml" afterPath="$PROJECT_DIR$/cropwatch.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
@@ -20,7 +13,7 @@
     <file path="/HelloWorldController.java" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377328340038" ignored="false" />
     <file path="/Dummy.txt" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377333844314" ignored="false" />
     <file path="/a.dummy" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377340081217" ignored="false" />
-    <file path="/pom.xml" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377341187769" ignored="false" />
+    <file path="/pom.xml" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377353155110" ignored="false" />
     <file path="$PROJECT_DIR$/../../work/pam/merchandise_services/analytics/src/main/java/it/gruppopam/merchandise/analytics/controller/AlertController.java" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377328285568" ignored="false" />
     <file path="/applicationContext.xml" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377331304916" ignored="false" />
     <file path="$PROJECT_DIR$/../../work/pam/infrastructure/jetty-container/pom.xml" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377331064665" ignored="false" />
@@ -32,7 +25,7 @@
     <file path="$PROJECT_DIR$/src/main/java/it/pipe/core/strategy/PipeSyncStrategy.java" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377333737392" ignored="false" />
     <file path="/PipeService.java" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377341046614" ignored="false" />
     <file path="/StatusResource.java" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377338786452" ignored="false" />
-    <file path="/CropWatchService.java" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377333935542" ignored="false" />
+    <file path="/CropWatchService.java" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377353046580" ignored="false" />
     <file path="/cropwatch_dev.yml" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377339154744" ignored="false" />
     <file path="/RegisterationService.java" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377339964084" ignored="false" />
     <file path="/FarmerCrop.java" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377339949455" ignored="false" />
@@ -40,6 +33,7 @@
     <file path="/CropWatchResource.java" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377341908687" ignored="false" />
     <file path="/RegisterResponseView.java" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377341934831" ignored="false" />
     <file path="/regirster_response.ftl" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377341869896" ignored="false" />
+    <file path="/migrations.xml" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377353665768" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,10 +105,19 @@
       <file leaf-file-name="CropWatchResource.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/cropwatch/CropWatchResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="25" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
+            <state line="21" column="65" selection-start="641" selection-end="648" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="migrations.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/migrations.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="35" selection-start="509" selection-end="509" vertical-scroll-proportion="0.2173913">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,15 +126,6 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/org/cropwatch/view/register_response.ftl">
           <provider selected="true" editor-type-id="text-editor">
             <state line="2" column="52" selection-start="54" selection-end="90" vertical-scroll-proportion="-1.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="0" selection-start="4813" selection-end="4813" vertical-scroll-proportion="0.9604743">
               <folding />
             </state>
           </provider>
@@ -166,21 +160,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FarmerCropDAO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/cropwatch/dao/FarmerCropDAO.java">
+      <file leaf-file-name="CropWatchService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="17" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0">
+            <state line="31" column="70" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1470#1471#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CropWatchService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchService.java">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="64" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.0">
+            <state line="29" column="42" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -189,7 +183,7 @@
       <file leaf-file-name="CropWatchConfiguration.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0">
+            <state line="16" column="34" selection-start="490" selection-end="510" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -213,7 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/assets/index.htm" />
         <option value="$PROJECT_DIR$/src/main/java/it/pipe/service/PipeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/pipe/StatusResource.java" />
@@ -224,11 +217,12 @@
         <option value="$PROJECT_DIR$/src/main/java/org/cropwatch/service/RegisterationService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/cropwatch_dev.yml" />
         <option value="$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/cropwatch/view/regirster_response.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/org/cropwatch/CropWatchResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/cropwatch/view/RegisterResponseView.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/migrations.xml" />
       </list>
     </option>
   </component>
@@ -749,13 +743,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxrs/2.7.3/cxf-rt-frontend-jaxrs-2.7.3-sources.jar!/org/apache/cxf/jaxrs/client/WebClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="42" selection-start="2921" selection-end="2932" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="31" selection-start="1328" selection-end="1331" vertical-scroll-proportion="0.0">
@@ -818,33 +805,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="64" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/yammer/dropwizard/dropwizard-views/0.6.1/dropwizard-views-0.6.1.jar!/com/yammer/dropwizard/views/View.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="14" selection-start="314" selection-end="314" vertical-scroll-proportion="-5.4">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/cropwatch/CropWatchResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="25" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -862,9 +826,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/cropwatch/CropWatchResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="65" selection-start="641" selection-end="648" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="34" selection-start="490" selection-end="510" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="70" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1470#1471#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="0" selection-start="4813" selection-end="4813" vertical-scroll-proportion="0.9604743">
+        <state line="29" column="42" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/migrations.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="35" selection-start="509" selection-end="509" vertical-scroll-proportion="0.2173913">
           <folding />
         </state>
       </provider>

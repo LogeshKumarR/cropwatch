@@ -60,6 +60,9 @@
     <orderEntry type="library" name="Maven: com.yammer.dropwizard:dropwizard-views:0.6.1" level="project" />
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.19" level="project" />
     <orderEntry type="library" name="Maven: com.github.spullara.mustache.java:compiler:0.8.8" level="project" />
+    <orderEntry type="library" name="Maven: com.yammer.dropwizard:dropwizard-migrations:0.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.liquibase:liquibase-core:2.0.5" level="project" />
+    <orderEntry type="library" name="Maven: com.mattbertolini:liquibase-slf4j:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: postgresql:postgresql:9.0-801.jdbc4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-all:1.9.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.8.2" level="project" />

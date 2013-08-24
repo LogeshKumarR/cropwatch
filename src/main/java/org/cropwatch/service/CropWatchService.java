@@ -6,6 +6,7 @@ import com.yammer.dropwizard.config.Bootstrap;
 import com.yammer.dropwizard.config.Environment;
 import com.yammer.dropwizard.db.DatabaseConfiguration;
 import com.yammer.dropwizard.jdbi.DBIFactory;
+import com.yammer.dropwizard.migrations.MigrationsBundle;
 import com.yammer.dropwizard.views.ViewBundle;
 import org.cropwatch.CropWatchResource;
 import org.skife.jdbi.v2.DBI;
@@ -28,6 +29,12 @@ public class CropWatchService extends Service<CropWatchConfiguration> {
         cropwatchConfiguraitonBootstrap.setName("Pipe Service");
         cropwatchConfiguraitonBootstrap.addBundle(new AssetsBundle("/assets/", "/"));
         cropwatchConfiguraitonBootstrap.addBundle(new ViewBundle());
+        cropwatchConfiguraitonBootstrap.addBundle(new MigrationsBundle<CropWatchConfiguration>() {
+            @Override
+            public DatabaseConfiguration getDatabaseConfiguration(CropWatchConfiguration configuration) {
+                return configuration.getCropwatchDBConfig();
+            }
+        });
 
     }
 
