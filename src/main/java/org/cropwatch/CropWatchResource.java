@@ -20,9 +20,16 @@ public class CropWatchResource {
     @Path("/register.xml")
     public RegisterResponseView hello(@QueryParam("txtweb-mobile") String phoneHash,
                                       @QueryParam("txtweb-message") String message) {
+        String status = "Registration Successful";
+        try{
         registerationService.register(phoneHash,message);
+    }catch(Exception e)
+    {
+        status = "Think that , you have already registerd";
+        e.printStackTrace();
+    }
 
-        return new RegisterResponseView();
+        return new RegisterResponseView(status);
     }
 
 }
