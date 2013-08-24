@@ -57,8 +57,10 @@
     <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-dbcp:7.0.33" level="project" />
     <orderEntry type="library" name="Maven: org.jdbi:jdbi:2.41" level="project" />
     <orderEntry type="library" name="Maven: com.yammer.metrics:metrics-jdbi:2.2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.yammer.dropwizard:dropwizard-views:0.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.19" level="project" />
+    <orderEntry type="library" name="Maven: com.github.spullara.mustache.java:compiler:0.8.8" level="project" />
     <orderEntry type="library" name="Maven: postgresql:postgresql:9.0-801.jdbc4" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: oracle.jdbc.driver:ojdbc6:11.2.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-all:1.9.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.8.2" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />

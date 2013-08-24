@@ -4,7 +4,11 @@ import com.yammer.dropwizard.Service;
 import com.yammer.dropwizard.assets.AssetsBundle;
 import com.yammer.dropwizard.config.Bootstrap;
 import com.yammer.dropwizard.config.Environment;
+import com.yammer.dropwizard.db.DatabaseConfiguration;
+import com.yammer.dropwizard.jdbi.DBIFactory;
+import com.yammer.dropwizard.views.ViewBundle;
 import org.cropwatch.CropWatchResource;
+import org.skife.jdbi.v2.DBI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,17 +24,26 @@ public class CropWatchService extends Service<CropWatchConfiguration> {
     }
 
     @Override
-    public void initialize(Bootstrap pipeConfiguraitonBootstrap) {
-        pipeConfiguraitonBootstrap.setName("Pipe Service");
-        pipeConfiguraitonBootstrap.addBundle(new AssetsBundle("/assets/", "/"));
+    public void initialize(Bootstrap cropwatchConfiguraitonBootstrap) {
+        cropwatchConfiguraitonBootstrap.setName("Pipe Service");
+        cropwatchConfiguraitonBootstrap.addBundle(new AssetsBundle("/assets/", "/"));
+        cropwatchConfiguraitonBootstrap.addBundle(new ViewBundle());
+
     }
 
     @Override
     public void run(CropWatchConfiguration configuration, Environment environment) throws Exception {
 
-        CropWatchResource cropResource = new CropWatchResource();
+        DBI dbi = getDBI(configuration.getCropwatchDBConfig(), environment, "Cropwatch DB");
+        RegisterationService registerationService = new RegisterationService(dbi);
+
+        CropWatchResource cropResource = new CropWatchResource(registerationService);
         environment.addResource(cropResource);
 
         logger.warn("Starting Scheduler!!!");
+    }
+
+    protected DBI getDBI(DatabaseConfiguration databaseConfiguration, Environment environment, String dbiName) throws ClassNotFoundException {
+        return new DBIFactory().build(environment, databaseConfiguration, dbiName);
     }
 }

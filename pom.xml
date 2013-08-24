@@ -21,15 +21,14 @@
             <version>0.6.1</version>
         </dependency>
         <dependency>
+            <groupId>com.yammer.dropwizard</groupId>
+            <artifactId>dropwizard-views</artifactId>
+            <version>0.6.1</version>
+        </dependency>
+        <dependency>
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.0-801.jdbc4</version>
-        </dependency>
-        <dependency>
-            <groupId>oracle.jdbc.driver</groupId>
-            <artifactId>ojdbc6</artifactId>
-            <version>11.2.0.1</version>
-            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>

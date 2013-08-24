@@ -1,0 +1,37 @@
+http:
+  rootPath: /service/*
+sourceDBConfig:
+  driverClass: oracle.jdbc.driver.OracleDriver
+  user: USER01_TW
+  password: USER01_TW
+  url: jdbc:oracle:thin:@172.31.167.68:1521:pam
+  validationQuery: select 1 from dual
+  minSize: 2
+  maxSize: 8
+  connectionInitializationStatements: [ALTER SESSION SET CURRENT_SCHEMA = PRODGRP]
+targetDBConfig:
+  driverClass: org.postgresql.Driver
+  user: postgres
+  password: pass
+  url: jdbc:postgresql://172.16.20.210:5432/merchandise_master
+  validationQuery: select 1
+  minSize: 2
+  maxSize: 8
+pipeDBConfig:
+  driverClass: org.postgresql.Driver
+  user: postgres
+  password: pass
+  url: jdbc:postgresql://172.16.20.210:5432/pipe
+  validationQuery: select 1
+  minSize: 2
+  maxSize: 8
+logging:
+  level: INFO
+  console:
+    enabled: true
+    threshold: ALL
+
+appConfig:
+    subscriberIn: MP
+    subscriberOut: MP_PROD
+    truncateJournal: false

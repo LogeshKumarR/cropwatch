@@ -1,0 +1,10 @@
+http:
+  rootPath: /service/*
+cropwatchDBConfig:
+  driverClass: org.postgresql.Driver
+  user: postgres
+  password: pass
+  url: jdbc:postgresql://localhost:5432/cropwatch
+  validationQuery: select 1
+  minSize: 2
+  maxSize: 8
