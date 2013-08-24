@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93df4ee0-16d5-4e51-87bb-8d19fe902d26" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/migrations.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchService.java" afterPath="$PROJECT_DIR$/src/main/java/org/cropwatch/service/CropWatchService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cropwatch.iml" afterPath="$PROJECT_DIR$/cropwatch.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/migrations.xml" afterPath="$PROJECT_DIR$/src/main/resources/migrations.xml" />
     </list>
     <ignored path="cropwatch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +29,7 @@
     <file path="/CropWatchResource.java" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377341908687" ignored="false" />
     <file path="/RegisterResponseView.java" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377341934831" ignored="false" />
     <file path="/regirster_response.ftl" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377341869896" ignored="false" />
-    <file path="/migrations.xml" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377353665768" ignored="false" />
+    <file path="/migrations.xml" changelist="93df4ee0-16d5-4e51-87bb-8d19fe902d26" time="1377353994059" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +112,7 @@
       <file leaf-file-name="migrations.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/migrations.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="35" selection-start="509" selection-end="509" vertical-scroll-proportion="0.2173913">
+            <state line="12" column="34" selection-start="752" selection-end="752" vertical-scroll-proportion="0.24128686">
               <folding />
             </state>
           </provider>
@@ -860,7 +856,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/migrations.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="35" selection-start="509" selection-end="509" vertical-scroll-proportion="0.2173913">
+        <state line="12" column="34" selection-start="752" selection-end="752" vertical-scroll-proportion="0.24128686">
           <folding />
         </state>
       </provider>
