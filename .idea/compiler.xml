@@ -25,6 +25,9 @@
         <module name="cropwatch" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cropwatch" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 
