@@ -21,14 +21,12 @@ public class CropWatchResource {
     public RegisterResponseView hello(@QueryParam("txtweb-mobile") String phoneHash,
                                       @QueryParam("txtweb-message") String message) {
         String status = "Registration Successful";
-        try{
-        registrationService.register(phoneHash,message);
-    }catch(Exception e)
-    {
-        status = "Think that , you have already registerd";
-        e.printStackTrace();
-    }
-        registrationService.register(phoneHash,message);
+        try {
+            registrationService.register(phoneHash,message);
+        } catch(Exception e) {
+            status = "Think that , you have already registerd";
+            e.printStackTrace();
+        }
 
         return new RegisterResponseView(status);
     }
