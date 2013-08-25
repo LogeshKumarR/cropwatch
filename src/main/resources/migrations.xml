@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
-    <changeSet author="cropWatcher" id="1377353962151-1">
+    <changeSet author="cropWatcher" id="1377404510145-1">
+        <createTable tableName="crop_schedules">
+            <column name="crop_name" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="crop_schedules_pkey"/>
+            </column>
+            <column name="cron_expression" type="VARCHAR"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="cropWatcher" id="1377404510145-2">
         <createTable tableName="farmer_crop">
-            <column name="phone_hash" type="VARCHAR(2147483647)">
+            <column name="phone_hash" type="VARCHAR">
                 <constraints nullable="false"/>
             </column>
             <column name="crop_name" type="VARCHAR(255)">
@@ -10,7 +18,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="cropWatcher" id="1377353962151-2">
+    <changeSet author="cropWatcher" id="1377404510145-3">
         <addPrimaryKey columnNames="phone_hash, crop_name" constraintName="farmer_crop_pkey" tableName="farmer_crop"/>
     </changeSet>
 </databaseChangeLog>
