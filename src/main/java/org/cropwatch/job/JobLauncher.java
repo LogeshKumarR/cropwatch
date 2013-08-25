@@ -25,6 +25,7 @@ public class JobLauncher {
         Scheduler scheduler = sf.getScheduler();
 
         for (CropInfoJob infoJob : cropJobDAO.getAll()) {
+            infoJob.setDbi(dbi);
             logger.warn("Scheduling job - " + infoJob.getCropName());
             JobDetail jobDetail = newJob(CropInfoJob.class)
                     .withIdentity(infoJob.getCropName())

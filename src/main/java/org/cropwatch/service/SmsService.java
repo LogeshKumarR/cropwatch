@@ -1,32 +1,29 @@
 package org.cropwatch.service;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLEncoder;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.OutputStreamWriter;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
+
 public class SmsService {
 	static String appKey = "6f1111a1-fef3-4a49-8ca2-582760fce262";
 	static String pubKey = "b7db79d8-556c-4b1c-9e11-1b7d3bfff2bd";
 	
-	public void setAppKey(String appKey)
-	{
+	public void setAppKey(String appKey) {
 		this.appKey = appKey;
 	}
-	public void setPubKey(String pubKey)
-	{
+	public void setPubKey(String pubKey) {
 		this.pubKey = pubKey;
 	}
-	public static int sendPushMessage(String message, String mobileHash) {
-		
 
+	public int sendPushMessage(String message, String mobileHash) {
+		
 		String head = "<html>"
 			+"<head>"
 			+"<meta name=\"txtweb-appkey\" content=\""+appKey+"\">"
@@ -63,14 +60,14 @@ public class SmsService {
 					return Integer.parseInt(code);
 				}
 			}
-		}
-		catch(Exception e){
+		} catch(Exception e) {
 			e.printStackTrace();
 		}
 
 		return -999; //APPLICATION ERROR
 	}
-	private static String getTagValue(String sTag, Element eElement) {
+
+	private String getTagValue(String sTag, Element eElement) {
         NodeList nodeList = eElement.getElementsByTagName(sTag).item(0).getChildNodes();
         Node node = nodeList.item(0);
         return node.getNodeValue();
