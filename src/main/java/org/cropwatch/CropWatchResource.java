@@ -1,6 +1,6 @@
 package org.cropwatch;
 
-import org.cropwatch.service.RegisterationService;
+import org.cropwatch.service.RegistrationService;
 import org.cropwatch.view.RegisterResponseView;
 
 import javax.ws.rs.*;
@@ -10,10 +10,10 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.TEXT_HTML)
 public class CropWatchResource {
 
-    private RegisterationService registerationService;
+    private RegistrationService registrationService;
 
-    public CropWatchResource(RegisterationService registerationService) {
-        this.registerationService = registerationService;
+    public CropWatchResource(RegistrationService registrationService) {
+        this.registrationService = registrationService;
     }
 
     @GET
@@ -22,12 +22,13 @@ public class CropWatchResource {
                                       @QueryParam("txtweb-message") String message) {
         String status = "Registration Successful";
         try{
-        registerationService.register(phoneHash,message);
+        registrationService.register(phoneHash,message);
     }catch(Exception e)
     {
         status = "Think that , you have already registerd";
         e.printStackTrace();
     }
+        registrationService.register(phoneHash,message);
 
         return new RegisterResponseView(status);
     }

@@ -9,6 +9,7 @@ import com.yammer.dropwizard.jdbi.DBIFactory;
 import com.yammer.dropwizard.migrations.MigrationsBundle;
 import com.yammer.dropwizard.views.ViewBundle;
 import org.cropwatch.CropWatchResource;
+import org.cropwatch.job.JobLauncher;
 import org.skife.jdbi.v2.DBI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,11 +26,11 @@ public class CropWatchService extends Service<CropWatchConfiguration> {
     }
 
     @Override
-    public void initialize(Bootstrap cropwatchConfiguraitonBootstrap) {
-        cropwatchConfiguraitonBootstrap.setName("Pipe Service");
-        cropwatchConfiguraitonBootstrap.addBundle(new AssetsBundle("/assets/", "/"));
-        cropwatchConfiguraitonBootstrap.addBundle(new ViewBundle());
-        cropwatchConfiguraitonBootstrap.addBundle(new MigrationsBundle<CropWatchConfiguration>() {
+    public void initialize(Bootstrap bootstrap) {
+        bootstrap.setName("CropWatch Service");
+        bootstrap.addBundle(new AssetsBundle("/assets/", "/"));
+        bootstrap.addBundle(new ViewBundle());
+        bootstrap.addBundle(new MigrationsBundle<CropWatchConfiguration>() {
             @Override
             public DatabaseConfiguration getDatabaseConfiguration(CropWatchConfiguration configuration) {
                 return configuration.getCropwatchDBConfig();
@@ -42,9 +43,10 @@ public class CropWatchService extends Service<CropWatchConfiguration> {
     public void run(CropWatchConfiguration configuration, Environment environment) throws Exception {
 
         DBI dbi = getDBI(configuration.getCropwatchDBConfig(), environment, "Cropwatch DB");
-        RegisterationService registerationService = new RegisterationService(dbi);
+        RegistrationService registrationService = new RegistrationService(dbi);
+        new JobLauncher(dbi).launchAllJobs();
 
-        CropWatchResource cropResource = new CropWatchResource(registerationService);
+        CropWatchResource cropResource = new CropWatchResource(registrationService);
         environment.addResource(cropResource);
 
         logger.warn("Starting Scheduler!!!");
