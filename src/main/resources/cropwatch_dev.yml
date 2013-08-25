@@ -4,7 +4,7 @@ cropwatchDBConfig:
   driverClass: org.postgresql.Driver
   user: postgres
   password: pass
-  url: jdbc:postgresql://10.100.12.121:5432/cropwatch
+  url: jdbc:postgresql://localhost:5432/cropwatch
   validationQuery: select 1
   minSize: 2
   maxSize: 8
